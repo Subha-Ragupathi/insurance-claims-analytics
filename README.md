@@ -26,7 +26,7 @@ This project builds a medallion-style pipeline that:
 
 ## Architecture
 Raw CSV Files -> Bronze Layer -> Silver Layer -> Gold Layer -> SQL Queries -> Dashboard
-![Architecture Diagram](docs/architecture.png)
+![Architecture Diagram](docs/project_architecture.png)
 
 ## Repository Structure
 - data/raw -> source CSV files
