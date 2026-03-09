@@ -1,0 +1,6 @@
+claim_id,policy_id,claim_date,claim_type,claim_amount,claim_status,incident_city,fraud_flag
+CL001,P001,2023-06-15,Collision,4500,Approved,Toronto,0
+CL002,P002,2023-07-20,Fire,12000,Pending,Mississauga,1
+CL003,P003,2023-08-05,Medical,3000,Rejected,Scarborough,0
+CL004,P004,2023-09-10,Collision,5200,Approved,Markham,0
+CL005,P005,2023-10-11,Water Damage,8000,Pending,North York,1
