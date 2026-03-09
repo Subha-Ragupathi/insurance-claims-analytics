@@ -1,0 +1,6 @@
+customer_id,customer_name,age,gender,city,state,join_date
+C001,Alice Johnson,34,F,Toronto,ON,2022-01-10
+C002,Bob Smith,45,M,Mississauga,ON,2021-11-15
+C003,Carol Davis,29,F,Scarborough,ON,2023-02-01
+C004,David Brown,40,M,Markham,ON,2022-08-21
+C005,Emma Wilson,31,F,North York,ON,2023-04-18
