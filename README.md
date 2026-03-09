@@ -15,5 +15,9 @@ This project demonstrates an end-to-end Azure-style data engineering pipeline fo
 ## Planned Architecture
 Raw Data -> Bronze -> Silver -> Gold -> Dashboard
 
-## Project Status
-In progress
+## Repository Structure
+
+- data/raw -> source CSV files
+- notebooks -> PySpark ingestion and transformation scripts
+- sql -> analytics queries
+- docs -> project overview and architecture notes
