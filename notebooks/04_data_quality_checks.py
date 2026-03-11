@@ -1,11 +1,6 @@
-from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, count, when
 
-spark = SparkSession.builder \
-    .appName("Data Quality Checks") \
-    .getOrCreate()
-
-silver_path = "output/silver/"
+silver_path = "/Volumes/workspace/default/silver/"
 claims = spark.read.format("delta").load(silver_path + "claims")
 
 null_check = claims.select([

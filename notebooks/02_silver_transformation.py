@@ -1,12 +1,12 @@
-from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, to_date, when, upper, trim
+from pyspark.sql import SparkSession
 
 spark = SparkSession.builder \
-    .appName("Insurance Silver Transformation") \
+    .appName("Insurance Silver Ingestion") \
     .getOrCreate()
 
-bronze_path = "output/bronze/"
-silver_path = "output/silver/"
+bronze_path = "/Volumes/workspace/default/bronze/"
+silver_path = "/Volumes/workspace/default/silver/"
 
 customers_df = spark.read.format("delta").load(bronze_path + "customers")
 policies_df = spark.read.format("delta").load(bronze_path + "policies")
