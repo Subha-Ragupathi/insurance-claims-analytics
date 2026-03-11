@@ -4,8 +4,8 @@ spark = SparkSession.builder \
     .appName("Insurance Bronze Ingestion") \
     .getOrCreate()
 
-base_input_path = "data/raw/"
-base_output_path = "output/bronze/"
+base_input_path = "dbfs:/data/raw/"
+base_output_path = "dbfs:/output/bronze/"
 
 datasets = {
     "customers": "customers.csv",
