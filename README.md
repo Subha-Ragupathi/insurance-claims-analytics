@@ -1,10 +1,10 @@
 # Insurance Claims Analytics Platform
 
 ## Overview
-This project implements an end-to-end insurance claims analytics pipeline using an Azure-style medallion architecture. It processes raw customer, policy, claims, and payment data through bronze, silver, and gold layers to produce analytics-ready outputs for downstream reporting.
+This project implements an end-to-end insurance claims analytics pipeline using a Databricks-based medallion architecture. It processes raw customer, policy, claims, and payment data through bronze, silver, and gold layers to produce analytics-ready outputs for downstream reporting.
 
 ## Business Problem
-Insurance organizations generate customer, policy, claims, and payment data from multiple upstream systems. Raw source data is not directly suitable for analytics because it often contains duplicates, inconsistent text values, unstandardized date formats, and limited business-level aggregations.
+Insurance organizations generate customer, policy, claims, and payment data from multiple upstream systems. Raw source data is not directly suitable for analytics because it can contain duplicates, inconsistent text values, unstandardized date formats, and limited business-level aggregations.
 
 ## Solution
 This project builds a layered data engineering pipeline that:
@@ -15,6 +15,9 @@ This project builds a layered data engineering pipeline that:
 - creates business-ready summary datasets in a gold layer
 - exposes SQL-ready outputs for reporting and analytics
 - supports orchestration through a Databricks master pipeline notebook
+
+## Business Value
+The gold-layer outputs help insurance analysts and business teams evaluate claim patterns across policy types, fraud indicators, and payment outcomes. These summaries can support operational reporting, fraud monitoring, payment analysis, and claims-performance tracking.
 
 ## Tech Stack
 - Python
@@ -42,8 +45,16 @@ Raw CSV Files
 - `notebooks` - bronze, silver, gold, and data-quality notebooks
 - `sql` - analytical SQL queries
 - `docs` - architecture, execution proof, and supporting documentation
-- `adf` - Azure Data Factory design notes
-- `.github/workflows` - CI workflow for code checks
+- `adf` - Azure Data Factory pipeline design notes
+- `.github/workflows` - CI workflow for Python code checks
+
+## Key Files
+- `notebooks/01_bronze_ingestion.py`
+- `notebooks/02_silver_transformation.py`
+- `notebooks/03_gold_aggregation.py`
+- `notebooks/04_data_quality_checks.py`
+- `notebooks/05_master_pipeline`
+- `docs/project_architecture.png`
 
 ## Source Data
 The project uses the following raw input datasets:
@@ -87,10 +98,11 @@ The notebooks were executed successfully in Databricks using raw, bronze, silver
 
 ## Pipeline Orchestration
 The end-to-end workflow is orchestrated through a Databricks master pipeline notebook that executes:
-1. bronze ingestion
-2. silver transformation
-3. gold aggregation
-4. data-quality checks
+
+1. bronze ingestion  
+2. silver transformation  
+3. gold aggregation  
+4. data-quality checks  
 
 ![Master Pipeline Success](docs/databricks_master_pipeline_success.png)
 ![Job Run Success](docs/databricks_job_success.png)
@@ -104,10 +116,16 @@ The end-to-end workflow is orchestrated through a Databricks master pipeline not
 - payment summary by claim status
 - claim amount trends
 
+## How to Run
+1. Upload raw CSV files to the Databricks raw volume
+2. Run `01_bronze_ingestion.py`
+3. Run `02_silver_transformation.py`
+4. Run `03_gold_aggregation.py`
+5. Run `04_data_quality_checks.py`
+6. Run `05_master_pipeline` for end-to-end orchestration
+
 ## Future Enhancements
-- add Power BI dashboard screenshots
 - implement ADF orchestration in Azure
-- replace sample data with larger public datasets
 - extend monitoring and parameterization
 
 ## Status
