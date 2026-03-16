@@ -1,12 +1,7 @@
-from pyspark.sql import SparkSession
 from pyspark.sql.functions import sum, count, avg
 
-spark = SparkSession.builder \
-    .appName("Insurance Gold Aggregation") \
-    .getOrCreate()
-
-silver_path = "output/silver/"
-gold_path = "output/gold/"
+silver_path = "/Volumes/workspace/default/silver/"
+gold_path = "/Volumes/workspace/default/gold/"
 
 customers = spark.read.format("delta").load(silver_path + "customers")
 policies = spark.read.format("delta").load(silver_path + "policies")
