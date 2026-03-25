@@ -4,3 +4,43 @@ CL002,P002,2023-07-20,Fire,12000,Pending,Mississauga,1
 CL003,P003,2023-08-05,Medical,3000,Rejected,Scarborough,0
 CL004,P004,2023-09-10,Collision,5200,Approved,Markham,0
 CL005,P005,2023-10-11,Water Damage,8000,Pending,North York,1
+CL006,P006,2023-03-18,Collision,6700,Approved,Ottawa,0
+CL007,P007,2023-07-02,Medical,4200,Approved,Hamilton,0
+CL008,P008,2023-05-14,Fire,15000,Rejected,Brampton,1
+CL009,P009,2023-09-28,Collision,3800,Approved,Vaughan,0
+CL010,P010,2023-11-05,Medical,9500,Pending,London,0
+CL011,P011,2023-02-22,Theft,7200,Approved,Kitchener,0
+CL012,P012,2023-04-10,Water Damage,11000,Approved,Windsor,1
+CL013,P013,2023-06-30,Medical,2800,Rejected,Oshawa,0
+CL014,P014,2023-08-19,Collision,4900,Approved,Barrie,0
+CL015,P015,2023-10-25,Fire,13500,Pending,Guelph,1
+CL016,P016,2023-03-05,Collision,5600,Rejected,Thunder Bay,0
+CL017,P017,2023-07-18,Medical,3500,Approved,St. Catharines,0
+CL018,P018,2023-05-22,Water Damage,9800,Approved,Cambridge,0
+CL019,P019,2023-09-14,Collision,4100,Approved,Ajax,0
+CL020,P020,2023-12-01,Medical,6300,Pending,Whitby,0
+CL021,P021,2023-02-10,Theft,8500,Approved,Pickering,1
+CL022,P022,2023-04-28,Fire,14200,Rejected,Burlington,1
+CL023,P023,2023-06-12,Medical,3200,Approved,Oakville,0
+CL024,P024,2023-08-08,Collision,5800,Approved,Sudbury,0
+CL025,P025,2023-10-18,Water Damage,10500,Pending,Niagara Falls,0
+CL026,P026,2023-11-22,Collision,4700,Approved,Kingston,0
+CL027,P027,2023-03-30,Medical,7800,Approved,Waterloo,0
+CL028,P028,2023-05-08,Fire,16000,Rejected,Peterborough,1
+CL029,P029,2023-07-25,Collision,3600,Approved,Brantford,0
+CL030,P030,2023-09-05,Medical,5100,Pending,Sarnia,0
+CL031,P001,2023-11-10,Collision,4300,Approved,Toronto,0
+CL032,P006,2023-12-05,Theft,9200,Pending,Ottawa,1
+CL033,P011,2023-04-15,Collision,5400,Approved,Kitchener,0
+CL034,P014,2023-12-20,Collision,3900,Approved,Barrie,0
+CL035,P019,2023-11-28,Collision,4600,Rejected,Ajax,0
+CL036,P009,2023-12-15,Collision,5000,Approved,Vaughan,0
+CL037,P007,2023-11-18,Medical,7100,Approved,Hamilton,0
+CL038,P017,2023-12-10,Medical,4400,Pending,St. Catharines,0
+CL039,P031,2023-12-22,Water Damage,8700,Pending,Toronto,0
+CL040,P032,2023-12-28,Collision,5300,Approved,North York,0
+CL041,P002,2023-11-15,Fire,11500,Approved,Mississauga,0
+CL042,P005,2023-12-02,Water Damage,9100,Rejected,North York,1
+CL043,P010,2023-12-18,Medical,6800,Approved,London,0
+CL044,P022,2023-11-08,Water Damage,7500,Approved,Burlington,0
+CL045,P025,2023-12-30,Fire,13000,Pending,Niagara Falls,1
