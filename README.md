@@ -57,7 +57,7 @@ insurance-claims-analytics/
 │   ├── 03_gold_aggregation.py       # Partitioned business-ready summary tables
 │   ├── 04_data_quality_checks.py    # Null, duplicate, and row-count validation
 │   ├── 05_gold_sql_analytics.py     # SQL queries against gold tables
-│   └── 05_master_pipeline.ipynb     # End-to-end orchestration notebook
+│   └── 05_master_pipeline.py        # End-to-end orchestration notebook
 ├── tests/
 │   └── test_transformations.py      # 31 pytest tests (7 test classes)
 ├── sql/
@@ -108,9 +108,9 @@ Registers gold Delta tables as Spark SQL temp views and runs:
 ## How to Run on Databricks Community Edition (Free)
 
 ### Step 1: Upload CSV Files
-1. Go to **Data** → **DBFS** → **FileStore**
-2. Create folder: `/FileStore/insurance_claims/raw/`
-3. Upload all 4 CSV files from `data/raw/`:
+1. Go to **Catalog** → **workspace** → **default**
+2. Create volumes: `raw`, `bronze`, `silver`, `gold`
+3. Upload all 4 CSV files from `data/raw/` into the `raw` volume:
    - `customers.csv`, `policies.csv`, `claims.csv`, `payments.csv`
 
 ### Step 2: Import Notebooks
@@ -162,11 +162,11 @@ In incremental mode:
 All paths, schemas, partition columns, and merge keys are managed in `notebooks/00_pipeline_config.py`:
 
 ```python
-# Default: Databricks Community Edition (DBFS)
-BASE_PATH = "/FileStore/insurance_claims"
+# Default: Unity Catalog Volumes (works on free edition)
+BASE_PATH = "/Volumes/workspace/default"
 
-# For Unity Catalog (paid Databricks):
-# Set env var: PIPELINE_BASE_PATH="/Volumes/workspace/default"
+# Override via environment variable if needed:
+# Set env var: PIPELINE_BASE_PATH="/Volumes/your_catalog/your_schema"
 
 # For incremental mode:
 # Set env var: PIPELINE_LOAD_MODE="incremental"
