@@ -53,7 +53,7 @@ def write_gold_table(df, table_name):
     output_path = GOLD_PATH + table_name
     partition_col = GOLD_PARTITIONS.get(table_name)
 
-    writer = df.write.format("delta").mode("overwrite")
+    writer = df.write.format("delta").mode("overwrite").option("overwriteSchema", "true")
     if partition_col:
         writer = writer.partitionBy(partition_col)
     writer.save(output_path)

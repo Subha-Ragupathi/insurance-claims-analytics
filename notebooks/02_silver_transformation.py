@@ -66,7 +66,7 @@ CLEANERS = {
 
 def write_silver_full(df, silver_path, partition_by):
     """Full overwrite of the silver table."""
-    writer = df.write.format("delta").mode("overwrite")
+    writer = df.write.format("delta").mode("overwrite").option("overwriteSchema", "true")
     if partition_by:
         writer = writer.partitionBy(partition_by)
     writer.save(silver_path)
