@@ -11,9 +11,9 @@ import os
 # Environment: "databricks_community", "databricks_uc", or "local"
 ENVIRONMENT = os.getenv("PIPELINE_ENV", "databricks_community")
 
-# Base path — defaults to DBFS for Community Edition
-# For Unity Catalog: set PIPELINE_BASE_PATH=/Volumes/workspace/default
-BASE_PATH = os.getenv("PIPELINE_BASE_PATH", "/FileStore/insurance_claims")
+# Base path — defaults to Unity Catalog Volume
+# Create a volume in Catalog before running: Catalog → default → default → Volumes → Create Volume
+BASE_PATH = os.getenv("PIPELINE_BASE_PATH", "/Volumes/workspace/default")
 
 # Layer paths
 RAW_PATH = f"{BASE_PATH}/raw/"

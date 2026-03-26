@@ -32,7 +32,7 @@ def validate_schema(df, table_name):
 
 def write_full(df, output_path, partition_by):
     """Full overwrite — drop and rewrite the entire table."""
-    writer = df.write.format("delta").mode("overwrite")
+    writer = df.write.format("delta").mode("overwrite").option("overwriteSchema", "true")
     if partition_by:
         writer = writer.partitionBy(partition_by)
     writer.save(output_path)

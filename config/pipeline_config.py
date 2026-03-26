@@ -18,10 +18,9 @@ import os
 # Environment: "databricks_community", "databricks_uc", or "local"
 ENVIRONMENT = os.getenv("PIPELINE_ENV", "databricks_community")
 
-# Base path — defaults to DBFS for Community Edition compatibility
-# Override for Unity Catalog: /Volumes/workspace/default
-# Override for local: ./data
-BASE_PATH = os.getenv("PIPELINE_BASE_PATH", "/FileStore/insurance_claims")
+# Base path — defaults to Unity Catalog Volume
+# Override for local testing: ./data
+BASE_PATH = os.getenv("PIPELINE_BASE_PATH", "/Volumes/workspace/default")
 
 # Layer paths
 RAW_PATH = f"{BASE_PATH}/raw/"
